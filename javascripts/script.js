@@ -9,6 +9,7 @@ for(var i = 0; i < btn.length; i++){
 	document.onkeypress = function(event){
 		var key = event.charCode; // Mudança de keyCode para charCode, por que o firefox não aceitou keyCode
 		//console.log(key);
+		//console.log(String.fromCharCode(47));
 		for(var e = 0; e <= 10; e++){
 			if(key === (48+e)){
 				input.innerHTML += e;
