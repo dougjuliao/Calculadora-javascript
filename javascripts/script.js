@@ -21,7 +21,12 @@ for(var i = 0; i < btn.length; i++){
 				var equacao = inputVal;
 				
 				if(equacao){
-					input.innerHTML = eval(equacao);
+					try {
+						input.innerHTML = eval(equacao);
+					} catch (e) {
+						alert('Erro na expressão');
+
+					} 
 				}
 				break;
 			default:
