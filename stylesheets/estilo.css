@@ -15,13 +15,15 @@ html {
 	background-size: cover;
 }
 #container{
-	width:21%;
+	width: 290px;
+	text-align: center;
 	height:auto;
 	margin:4px auto;
 }
 #calculadora{
 	width: 234px;
 	height: 230px;
+	margin:0 auto;
 	padding:2px;
 	background-color: #65D277;
 }
