@@ -18,12 +18,20 @@ html {
 	width:80%;
 	height:auto;
 	margin:4px auto;
-}
+	/* Centraliza a calculadora dentro do container */
+	display: flex;
+	justify-content: center;
+} 
 #calculadora{
 	width: 234px;
 	height: 230px;
 	padding:2px;
 	background-color: #65D277;
+	/* Centraliza a calculadora na página html */
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	margin: auto;
 }
 .input-valor{
 	margin:8px auto;
