@@ -6,32 +6,36 @@ var btn 	  = document.querySelectorAll(".key li"),
 
 // Percorro o array para usar todas as informações
 for(var i = 0; i < btn.length; i++){
-	document.onkeypress = function(){
-		var key = event.keyCode;
+	document.onkeydown = function(event){// Usando o onkeydown para poder usar o Backspace, pois o onkeypress não tem 
+		var key = event.key; // Usando o comando key, por esse comando retornar uma string com o nome da tecla selecionada
 		//console.log(key);
-		for(var e = 0; e <= 10; e++){
-			if(key === (48+e)){
-				input.innerHTML += e;
+		for(var e = 0; e <= 9; e++){
+			if(key == e){
+				input.innerHTML += e; 
 			}
 		}
 		switch (key){
-			case 42:
+			case "*":
 				input.innerHTML += "*";
 				break;
-			case 43:
+			case "+":
 				input.innerHTML += "+";
 				break;
-			case 45:
+			case "-":
 				input.innerHTML += "-";
 				break;
-			case 46:
+			case ".":
 				input.innerHTML += ".";
 				break;
-			case 47:
+			case "/":
 				input.innerHTML += "/";
 				break;
-			case 13:
-			case 61:
+			case "Backspace":
+				let str = "";
+				str = input.innerHTML;
+				input.innerHTML = str.slice(0, -1);
+			break;	
+			case "Enter":
 				var equacao = input.innerHTML;
 				if(equacao){
 					try {
@@ -42,8 +46,8 @@ for(var i = 0; i < btn.length; i++){
 					} 
 				}
 				break;
-			case 67:
-			case 99:
+			case "c":
+			case "C":
 				input.innerHTML = "";
 				break;						
 			default:
